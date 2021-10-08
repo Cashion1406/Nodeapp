@@ -1,0 +1,150 @@
+:root{
+    font-size: 16px;
+    font-family: 'Poppins';
+
+    
+}
+
+body{
+    padding: 0;
+    margin: 0;
+     
+}
+
+main{
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+
+
+.navbar{
+
+    position: fixed;
+    background-color: black;
+    transition: width 200ms ease;
+    border-radius: 4px;
+    
+}
+
+body::-webkit-scrollbar{
+    width: 0.3rem;
+
+}
+body::-webkit-scrollbar-track{
+    background: black;
+}
+body::-webkit-scrollbar-thumb{
+    background: plum;
+    border-radius: 5px;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item{
+    width: 100%;
+}
+
+.nav-item:last-child{
+    margin-top: auto;
+}
+
+.nav-link,#food{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    text-decoration: none;
+    filter:grayscale(100%) opacity(0.8);
+    transition: 600ms;
+}
+
+.link-text{
+    display: none;
+    margin-left: 1rem;
+    color: red;
+    font-weight: 600;
+}
+
+.nav-link svg{
+    max-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+
+
+
+
+#food{
+    color: rgb(255, 0, 234);
+    
+}
+
+.nav-link:hover{
+    filter: grayscale(0%) opacity(1);
+    background: rgb(226, 210, 210);
+    color: rgb(255, 0, 234);
+
+}
+
+.logo{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.4ch;
+}
+
+.logo img{
+    transform: rotate(0deg);
+    transition: 900ms;
+}
+
+.navbar:hover .logo img{
+    transform: rotate(-360deg);
+}
+
+ /*small screen*/
+ @media only screen and (min-width:600px) {
+   .navbar{
+    width: 5rem;
+    height: 100vh;
+   }
+   .navbar:hover .link-text{
+    display: inline;
+    }
+    .navbar:hover{
+        width: 16rem;
+        
+    }
+ }
+
+
+  /*big screen*/
+  @media only screen and (max-width:600px) {
+     .navbar{
+         bottom: 0;
+         width: 100vw;
+         height: 5rem;
+     }
+     .logo{
+         display: none;
+     }
+     .navbar-nav{
+         flex-direction: row;
+     }
+     .nav-link{
+         justify-content: center;
+     }
+     main{
+         margin: 0;
+     }
+}
