@@ -1,22 +1,19 @@
 {
-  "name": "hero",
+  "name": "node",
   "version": "1.0.0",
-  "description": "node app",
-  "main": "index.js",
+  "description": "lmao",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cashion1406/CloudLmao.git"
+    "url": "git+https://github.com/Cashion1406/Nodeapp.git"
   },
-  "keywords": [
-    "Cashion"
-  ],
-  "author": "cashion1406@gmaio.com",
+  "author": "Cashion",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Cashion1406/CloudLmao/issues"
+    "url": "https://github.com/Cashion1406/Nodeapp/issues"
   },
-  "homepage": "https://github.com/Cashion1406/CloudLmao#readme"
+  "homepage": "https://github.com/Cashion1406/Nodeapp#readme"
 }
