@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
 
   switch(req.url){
     case "/home":
-    res.end(web); 
+    res.end(web.toString()); 
   break;
 
   case "/about":
