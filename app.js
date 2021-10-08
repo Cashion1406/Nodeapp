@@ -2,17 +2,19 @@ const http = require('http');
 
 const port = process.env.PORT || 3000 
 const fs = require('fs');
- var web = fs.readFileSync('index.html');
+
 
 const server = http.createServer((req, res) => { 
 
   res.statusCode = 200; 
 
-  res.setHeader('Content-Type', 'text/html'); 
+  res.setHeader("Content-Type", "text/html"); 
 
   switch(req.url){
     case "/home":
-    res.end(web.toString()); 
+    res.writeHead(200);
+    var web = fs.readFileSync(__dirname+'/index.html');
+    res.end(web); 
   break;
 
   case "/about":
@@ -26,6 +28,6 @@ const server = http.createServer((req, res) => {
 
 server.listen(port,() => { 
 
-  console.log(`Server running at port `+port); 
+  console.log("Server running at port "+port); 
 
 }); 
