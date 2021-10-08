@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
   switch(req.url){
     case "/home":
     res.writeHead(200);
-    var web = fs.readFileSync(__dirname+'/index.html');
+    var web = fs.readFileSync('./index.html');
     res.end(web); 
   break;
 
@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
   default:
     res.writeHead(100);
     res.end("BAKA");
-    console.log("STUPID");
+    
   break;
   }
 
